@@ -1,7 +1,8 @@
-use_frameworks!
+#use_frameworks!
 
 target 'LLMPay_Example' do
   pod 'LLMPay', :path => '../'
+  pod 'LLMPay/EBank', :path => '../'
 
   target 'LLMPay_Tests' do
     inherit! :search_paths

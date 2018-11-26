@@ -20,8 +20,31 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>LLEBankScheme</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>llEbankPayGWURL</string>
+				<string>comccbpay105330173990049EBankPayGWURL</string>
+				<string>bocmcht</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>mbspay</string>
+		<string>bocpay</string>
+		<string>bankabc</string>
+		<string>com.icbc.iphoneclient</string>
+		<string>cmbmobilebank</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
