@@ -6,7 +6,7 @@
 
 # 连连支付统一网关iOS SDK 接入指南
 
-> 本指南为连连支付统一网关iOS SDK 模式接入指南， 阅读对象为接入 LLMPay SDK 的开发者  
+> 本指南为连连支付统一网关iOS SDK 模式接入指南， 阅读对象为接入 LLMPay SDK 的开发者 ，[点击查看银行 APP 支付接入指南](./LLMPay/EBank)
 
 ## 一. SDK 文件说明
 

@@ -25,9 +25,8 @@
 |libLLMPay.a                  |	连连支付银行 APP 支付统一网关 iOS SDK  |
 |LLEBankPay.h                 |	SDK 头文件                           |
 |LLEBankResources.bundle      |  资源文件， 包含自定义 css 以及图片资源|
-|README-EBank.md              |	连连支付银行APP支付统一网关iOS SDK接入指南|
+|README.md              |	连连支付银行APP支付统一网关iOS SDK接入指南|
 |CHANGELOG.md                 |	更新日志                              |
-|BankLib文件夹						|	银行 SDK 与资源                       |
 
 # 集成 SDK
 
