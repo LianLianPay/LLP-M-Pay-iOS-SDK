@@ -4,11 +4,11 @@
 [![License](https://img.shields.io/cocoapods/l/LLMPay.svg?style=flat)](https://cocoapods.org/pods/LLMPay)
 [![Platform](https://img.shields.io/cocoapods/p/LLMPay.svg?style=flat)](https://cocoapods.org/pods/LLMPay)
 
-# 连连支付银行APP支付统一网关 iOS SDK 接入指南
+# 连连支付统一网关 银行APP支付 iOS SDK 接入指南
 
 > 本指南为连连支付银行APP支付统一网关iOS SDK 模式接入指南， 阅读对象为接入 LLMPay/EBank SDK 的开发者  
 
-## 场景介绍
+## 一、场景介绍
 商户APP调用连连支付提供的 iOS SDK 调用客户端的支付模块。
 
 如果用户安装了对应银行的 APP， 商户 APP 就会跳转到安装的银行 APP 中完成支付， 支付完成后跳回商户APP 内， 最后由商户根据连连支付 SDK 的回调，处理返回的支付结果， 并展示给用户。
@@ -17,52 +17,64 @@
 
 **商户需要在接收到回调后调用商户服务端的订单查询接口**
 
-## SDK 文件说明
+## 二、SDK 文件说明
 
 |文件名|                       说明|
 |------------------           |-------------------                   |
 |libLLPaySDKCore.a            |	SDK base模块                        |
 |libLLMPay.a                  |	连连支付银行 APP 支付统一网关 iOS SDK  |
 |LLEBankPay.h                 |	SDK 头文件                           |
-|LLEBankResources.bundle      |  资源文件， 包含自定义 css 以及图片资源|
-|README.md              |	连连支付银行APP支付统一网关iOS SDK接入指南|
+|LLEBankResources.bundle      |  资源文件， 包含自定义 css 以及图片资源   |
+|README.md                		|	连连支付银行APP支付统一网关iOS SDK接入指南|
 |CHANGELOG.md                 |	更新日志                              |
+|BankSDK 文件夹					|	银行 SDK（请手动集成）                |
 
-# 集成 SDK
+## 三、集成连连银行APP支付 SDK
 
-## 一、 使用 Pod 接入
+> 使用 Pod 接入
 
 在 podfile 中加入以下代码执行 `pod install` 即可
 
 `pod 'LLMPay/EBank'`
 
-## 二、直接导入工程
+> 直接导入工程
 
-### 2.1 导入 SDK 以及 资源文件
+导入连连支付银行APP支付的静态库及相应的 LLEBankResources.bundle 文件（请勿更改 bundle 文件名）
 
-1. 导入连连支付LLEBankPay的静态库及相应的 LLEBankResources.bundle 文件（请勿更改 bundle 文件名）
-2. 导入对应银行的 SDK 和 bundle 文件
+请检查 build phases 中 是否有导入**`libLLEBankPay.a`**
+
+Copy Bundle Resources  是否有引入**`LLEBankResources.bundle`**
+
+## 四、导入银行 SDK
+
+将 [BankSDK 文件夹](https://gitee.com/LLPayiOS/LLMPay/tree/master/LLMPay/EBank)拖入工程目录， 勾选 Copy Item If Needed 以导入银行SDK以及相应的bundle文件
 
 请检查 build phases 中 是否有导入
 
-* libLLEBankPay.a
 * libABCAppCaller.a (农行 SDK )
 * ICBCPaySDK.framework (工行 SDK )
 * CCBNetPaySDK.framework （建行SDK）
 
 Copy Bundle Resources  是否有引入
 
-* LLEBankResources.bundle 
 * ICBCPaySDK.bundle (工行资源包)
 * CCBSDK.bundle （建行资源包）
 
-接入**工商银行**所需的第三方组件。 主要为[XML组件](https://github.com/neonichu/GDataXML/tree/master/Sources/GDataXML)、网络请求框架 [AFNetWorking](https://github.com/AFNetworking/AFNetworking/)、[base64组件](https://github.com/nicklockwood/Base64) 、[GTM Base 64](https://github.com/r258833095/GTMBase64)、[toast组件](https://github.com/scalessec/Toast)。
+接入**工商银行SDK**所需的第三方组件。 主要为
 
-## 三、Xcode 配置
+[XML组件](https://github.com/neonichu/GDataXML/tree/master/Sources/GDataXML)、
+[base64组件](https://github.com/nicklockwood/Base64) 、
+[GTM Base 64](https://github.com/r258833095/GTMBase64)、
+[AFNetWorking](https://github.com/AFNetworking/AFNetworking/)、
+[toast组件](https://github.com/scalessec/Toast)。
 
-> Build Setting
+**注： 如果使用了 CocoaPods 集成， LLMPay/EBank 会自动依赖 AFNetworking 3.0以上版本， 以及 Toast 4.0.0 组件， 有关XML的工程配置也会自动加上**
 
-如果使用 CocoaPods， 无需配置
+## 五、Xcode 配置
+
+### 5.1 Build Setting 
+
+**如果使用 CocoaPods， 则无需配置**
 
 * Other linker flags  
 	* 添加 **-ObjC**  解决使用LLEBankPaySDK中分类时出现的Unrecognized Selector的问题
@@ -70,14 +82,14 @@ Copy Bundle Resources  是否有引入
 * Header Search Path
 	* 添加 **/usr/include/libxml2**  解决“Libxml/tree.h” file not found
 
-> Build Phases 
+### 5.2 Build Phases 
 
-如果使用 CocoaPods， 无需配置
+请确保导入了BankSDK文件夹
 
 * Compile sources
 	* 找到GTMBase64.m 和 GDataXmlNode.m， 点击右边的Compiler Flags 添加 **-fno-objc-arc** 以禁用ARC
 	
-> Info
+### 5.3 Info
 
 * Plist : Custom iOS Target Properties
 * 为了调起银行的 APP ， 需要在 info.plist 中，将银行APP的Scheme添加到白名单中
@@ -99,12 +111,12 @@ Copy Bundle Resources  是否有引入
 	</array>
 ```
 
-> URL Types
+### 5.4 URL Types
 
-为了让银行APP在处理完交易后点击返回商户能返回商户的APP， 需要配置商户APP的URL Schemes
+为了让银行APP在处理完交易后点击返回商户能返回商户的APP， 需要配置商户APP的 URL Schemes
 
-* 添加 URL Schemes，设置 Identifier 为 LLEBankScheme, 此处需要添加三个 schemes，  建行与中行需要单独配置，每个 schemes 中间以英文逗号隔开，schemes 格式如下：
-	1. schemes 格式为 ll + 商户号 + 字母
+* 添加 URL Schemes，设置 Identifier 为 **LLEBankScheme**, 此处需要添加三个 schemes，  建行与中行需要单独配置，每个 schemes 中间以英文逗号隔开，schemes 格式如下：
+	1. schemes 格式为 ll*****
 	2. schemes 格式为 comccbpay105330173990049+字母如（llebankpay）
 	3. schemes 为 bocmcht
 
@@ -125,9 +137,9 @@ Copy Bundle Resources  是否有引入
 		</dict>
 	</array>
 ```
->  App Transport Security Settings
+### 5.5 App Transport Security Settings
 
-* **若Allow Arbitrary Loads为NO**，请设置建行的ExceptionDomain
+* **若 Allow Arbitrary Loads 为 NO**，请为建行 SDK 设置 ExceptionDomain
 * Info.plist Open As Source Code 然后加入以下Xml代码
 
 ```xml
@@ -153,13 +165,13 @@ Copy Bundle Resources  是否有引入
 	</dict>	
 ```
 
-## 四、代码示例
+## 六、代码示例
 
-> 调用 SDK 参数说明  
+### 6.1 调用 SDK 参数说明  
 
-* gateway_url  创单返回的url，以llebankpay:// 开头
+`gateway_url` 为商户服务端请求连连服务端创单API返回的参数，以`llebankpay://` 开头
 
-> **使用APP调用**  
+### 6.2 **使用APP调用**  
 
 ```objc
 [[LLEBankPay sharedSDK] llEBankPayWithUrl:request.URL.absoluteString complete:^(LLPayResult result, NSDictionary *dic) {
@@ -167,13 +179,13 @@ Copy Bundle Resources  是否有引入
 }];
 ```
 
-> **使用WAP调用**  
+### 6.3 **使用WAP调用**  
 
-*WAP中的处理：*
+> *WAP中的处理：*
 
 商户需要在wap页面中创单，创完单后，取出gateway_url，直接使用`window.location.href`加载，
 
-*APP中的处理*
+> *APP中的处理*
 
 在webView的代理方法中拦截scheme `llebankpay`，拦截到后直接使用url的absoluteString调用SDK
 
@@ -192,9 +204,9 @@ Copy Bundle Resources  是否有引入
 
 **支付完成后请务必发起订单结果轮询， 确认支付结果，包括非正常返回情况**
 
-> 回调处理  
+### 6.4 回调处理  
 
-需要在APP Delegate中加入以下代码：
+为了收到银行SDK的回调，需要在APP Delegate中加入以下代码：
 
 ```objc
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
@@ -207,7 +219,7 @@ Copy Bundle Resources  是否有引入
 ```
 
 
-## 五、SDK返回码说明
+## 七、SDK返回码说明
 
 |返回码|说明|
 |-----|-----|
@@ -221,9 +233,18 @@ Copy Bundle Resources  是否有引入
 |	LE1002	|	交易异常，手机银行IP被禁止	|
 |	LE1003	|	交易已支付成功	|
 |	LE9001	|	请求接口报文返回异常	|
+
 **请注意，支付完成后必须通过订单查询接口查询订单结果，LE1001支付处理失败也可能是因为没有导入银行的SDK**
 
 ## 注意事项
 * 本SDK最低支持 iOS 8.0
 * 工行SDK暂不支持bitcode
+
+## Author
+
+LLPayiOSDev, iosdev@yintong.com.cn
+
+## License
+
+© 2003-2018 Lianlian Yintong Electronic Payment Co., Ltd. All rights reserved.
 

@@ -6,7 +6,8 @@
 
 # 连连支付统一网关iOS SDK 接入指南
 
-> 本指南为连连支付统一网关iOS SDK 模式接入指南， 阅读对象为接入 LLMPay SDK 的开发者 ，[点击查看银行 APP 支付接入指南](./LLMPay/EBank)
+> 本指南为连连支付统一网关iOS SDK 模式接入指南， 阅读对象为接入 LLMPay SDK 的开发者。
+>若接入的是银行APP支付SDK，请查看[连连支付统一网关 银行APP支付iOS SDK接入指南](./LLMPay/EBank)
 
 ## 一. SDK 文件说明
 
@@ -38,16 +39,15 @@
 
 ## 三. 调用 SDK
 
-1. 从服务端获取gateway_url
-2. 调用支付SDK
+* 从服务端获取gateway_url
+* 调用支付SDK
 
 ```objc
 [[LLMPaySDK sharedSdk] payApply:gateway_url complete:^(LLMPayResult result, NSDictionary *dic) {
 //根据服务result 与 dic 中的 ret_code 与 ret_msg 做出相应处理
 }];
 ```
-
-3. 调用签约SDK
+* 调用签约SDK
 
 ```objc
 [[LLMPaySDK sharedSdk] signApply:gateway_url complete:^(LLMPayResult result, NSDictionary *dic) {

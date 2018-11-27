@@ -35,7 +35,12 @@ Pod::Spec.new do |s|
         es.resource = 'LLMPay/EBank/LLEBankResources.bundle'
         es.dependency 'LLMPay/Core'
         es.source_files = 'LLMPay/EBank/*.h'
+        
+        #ICBC Dependency
+        es.dependency 'AFNetworking','~>3.0'
+        es.dependency 'Toast'
+        es.xcconfig = {'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2'}
+        es.libraries = 'xml2'
     end
-    
     
 end
