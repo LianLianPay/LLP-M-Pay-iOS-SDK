@@ -31,27 +31,11 @@ Pod::Spec.new do |s|
     
     s.subspec 'EBank' do |es|
         es.vendored_library = 'LLMPay/EBank/*.a'
-        es.vendored_frameworks = 'LLMPay/EBank/*.framework'
         es.public_header_files = 'LLMPay/EBank/*.h'
         es.resource = 'LLMPay/EBank/LLEBankResources.bundle'
         es.dependency 'LLMPay/Core'
-        es.dependency 'LLMPay/BankLib'
         es.source_files = 'LLMPay/EBank/*.h'
     end
     
-    s.subspec 'BankLib' do |bs|
-        bs.vendored_library = 'LLMPay/BankLib/Banks/*.a'
-        bs.vendored_frameworks = 'LLMPay/BankLib/Banks/*.framework'
-        bs.resource = 'LLMPay/BankLib/Banks/*.bundle'
-        bs.dependency 'AFNetworking'
-        bs.dependency 'Base64nl'
-        bs.dependency 'Toast'
-        bs.dependency 'XMLDictionary'
-        bs.xcconfig = {'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2'}
-        bs.source_files = 'LLMPay/BankLib/Banks/*.h/','LLMPay/BankLib/ICBCDependency/**/*.{h,m}'
-        bs.libraries = 'xml2'
-        bs.requires_arc = false
-        bs.requires_arc = ['LLMPay/BankLib/Banks/**/*','LLMPay/BankLib/ICBCDependency/xml/**/*']
-    end
     
 end

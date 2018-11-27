@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		58F549AD910F972FCE501FEE /* libPods-LLMPay_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C718E6AF8AFA4C96A6F92D67 /* libPods-LLMPay_Example.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -22,9 +21,9 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		838B068A21ABE88700DB7D7E /* README-EBank.md in Resources */ = {isa = PBXBuildFile; fileRef = 838B068921ABE88700DB7D7E /* README-EBank.md */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		FBFE28DB31CAF40050337FA7 /* libPods-LLMPay_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1B9D0C0D6E7B071C8844E4 /* libPods-LLMPay_Tests.a */; };
+		AB73F936291231C9D660D731 /* Pods_LLMPay_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C6FFB4B5731697B3C85275 /* Pods_LLMPay_Tests.framework */; };
+		CB07C44289225C3163A68C67 /* Pods_LLMPay_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4209A1EA77084295C46AF55E /* Pods_LLMPay_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +39,7 @@
 /* Begin PBXFileReference section */
 		02A58FD5CB27BBFC3AEB9737 /* Pods-LLMPay_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLMPay_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLMPay_Tests/Pods-LLMPay_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		310E8FF183AAB5DB835982BE /* Pods-LLMPay_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLMPay_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		4209A1EA77084295C46AF55E /* Pods_LLMPay_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLMPay_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* LLMPay_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLMPay_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,14 +61,12 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		67740A8D8B8F607B7D76F23F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		838B068921ABE88700DB7D7E /* README-EBank.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = "README-EBank.md"; path = "../README-EBank.md"; sourceTree = "<group>"; };
 		83E0C5B621A65A7800940239 /* LLMPay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LLMPay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E0C5FC21A6B61B00940239 /* LLMPay_Example copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LLMPay_Example copy-Info.plist"; path = "/Users/evenlam/GitHub/LLMPay/Example/LLMPay_Example copy-Info.plist"; sourceTree = "<absolute>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		922CE928A08FCD3686718DA5 /* Pods-LLMPay_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLMPay_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example.release.xcconfig"; sourceTree = "<group>"; };
 		969E782B3D60BF821EC57274 /* Pods-LLMPay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLMPay_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LLMPay_Tests/Pods-LLMPay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		AF1B9D0C0D6E7B071C8844E4 /* libPods-LLMPay_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LLMPay_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C718E6AF8AFA4C96A6F92D67 /* libPods-LLMPay_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LLMPay_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3C6FFB4B5731697B3C85275 /* Pods_LLMPay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLMPay_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4E0A8AED802ACE89F4C14A /* LLMPay.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LLMPay.podspec; path = ../LLMPay.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
@@ -80,7 +78,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				58F549AD910F972FCE501FEE /* libPods-LLMPay_Example.a in Frameworks */,
+				CB07C44289225C3163A68C67 /* Pods_LLMPay_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +89,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				FBFE28DB31CAF40050337FA7 /* libPods-LLMPay_Tests.a in Frameworks */,
+				AB73F936291231C9D660D731 /* Pods_LLMPay_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,8 +126,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				C718E6AF8AFA4C96A6F92D67 /* libPods-LLMPay_Example.a */,
-				AF1B9D0C0D6E7B071C8844E4 /* libPods-LLMPay_Tests.a */,
+				4209A1EA77084295C46AF55E /* Pods_LLMPay_Example.framework */,
+				B3C6FFB4B5731697B3C85275 /* Pods_LLMPay_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -184,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				FB4E0A8AED802ACE89F4C14A /* LLMPay.podspec */,
-				838B068921ABE88700DB7D7E /* README-EBank.md */,
 				67740A8D8B8F607B7D76F23F /* README.md */,
 			);
 			name = "Podspec Metadata";
@@ -212,7 +209,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				1BF08F66D74796566A3ACD27 /* [CP] Copy Pods Resources */,
+				4393367C579ECC948B0C13E8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,7 +281,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				838B068A21ABE88700DB7D7E /* README-EBank.md in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
@@ -303,7 +299,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1BF08F66D74796566A3ACD27 /* [CP] Copy Pods Resources */ = {
+		4393367C579ECC948B0C13E8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -312,8 +308,6 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example-resources.sh",
-				"${PODS_ROOT}/../../LLMPay/BankLib/Banks/CCBSDK.bundle",
-				"${PODS_ROOT}/../../LLMPay/BankLib/Banks/ICBCPaySDK.bundle",
 				"${PODS_ROOT}/../../LLMPay/EBank/LLEBankResources.bundle",
 				"${PODS_ROOT}/../../LLMPay/MPay/LLMPayResources.bundle",
 			);
@@ -321,8 +315,6 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CCBSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ICBCPaySDK.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLEBankResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLMPayResources.bundle",
 			);

@@ -1,4 +1,4 @@
-#use_frameworks!
+use_frameworks!
 
 target 'LLMPay_Example' do
   pod 'LLMPay', :path => '../'
