@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"version = %@", [LLMPay getSDKVersion]);
 }
 
 - (IBAction)PayAction:(UIButton *)sender {

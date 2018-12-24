@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'LLMPay'
-    s.version          = '3.3.3'
+    s.version          = '4.0.0'
     s.summary          = 'LLMPay iOS SDK'
     
     s.description      = <<-DESC

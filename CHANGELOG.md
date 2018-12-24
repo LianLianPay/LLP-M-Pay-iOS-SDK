@@ -1,6 +1,10 @@
 CHANGE LIST
 ======
 
+## LLMPaySDK 4.0.0
+build 2018121701
+- 银行APP支付SDK兼容网联渠道
+
 ## LLMPaySDK 3.3.2 
 build 2018110801
 - 由token模式改为gateway_url模式

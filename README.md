@@ -14,7 +14,7 @@
 |文件名|                       说明|
 |------------------                     |-------------------                        |
 |libLLPaySDKCore.a              |     SDK base模块                        |
-|libLLMPay.a                         |连连支付统一网关iOS SDK        |
+|libLLMobilePay.a                         |连连支付统一网关iOS SDK        |
 |LLMPay.h                               |SDK 头文件                                |
 |LLMPayResources.bundle      |  资源文件， 包含自定义 css 以及图片资源|
 |README.md                        |连连支付统一网关iOS SDK接入指南   |
