@@ -43,14 +43,14 @@
 * 调用支付SDK
 
 ```objc
-[[LLMPaySDK sharedSdk] payApply:gateway_url complete:^(LLMPayResult result, NSDictionary *dic) {
+[[LLMPay sharedSdk] payApply:gateway_url complete:^(LLMPayResult result, NSDictionary *dic) {
 //根据服务result 与 dic 中的 ret_code 与 ret_msg 做出相应处理
 }];
 ```
 * 调用签约SDK
 
 ```objc
-[[LLMPaySDK sharedSdk] signApply:gateway_url complete:^(LLMPayResult result, NSDictionary *dic) {
+[[LLMPay sharedSdk] signApply:gateway_url complete:^(LLMPayResult result, NSDictionary *dic) {
 //根据服务result 与 dic 中的 ret_code 与 ret_msg 做出相应处理
 }];
 ```
