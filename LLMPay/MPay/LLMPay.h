@@ -30,6 +30,10 @@ typedef void (^CompletionHandler)(LLMPayResult result, NSDictionary *dic);
  */
 + (LLMPay *)sharedSdk;
 
+/**
+ SDK 默认由 window.rootVC present, 若已占用,请自定义
+ */
+@property (nonatomic, strong) UIViewController *cusViewController;
 
 /**
  支付申请

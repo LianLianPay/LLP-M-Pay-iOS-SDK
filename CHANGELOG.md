@@ -1,8 +1,15 @@
 CHANGE LIST
 ======
 
-## LLMPaySDK 4.0.0
+## LLMPay 4.0.1
+build 2019031801
+
+- 服务协议去除勾选， 下一步改为 同意服务协议并支付
+- 修复了 iOS 8 关闭 touchID 后历次支付时崩溃的问题
+
+## LLMPay 4.0.0
 build 2018121701
+
 - 银行APP支付SDK兼容网联渠道
 
 ## LLMPaySDK 3.3.2 

@@ -424,7 +424,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example-resources.sh",
 				"${PODS_ROOT}/../../LLMPay/EBank/LLEBankResources.bundle",
 				"${PODS_ROOT}/../../LLMPay/MPay/LLMPayResources.bundle",
 			);
@@ -437,7 +437,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		711D6C134A0874542E627AFC /* [CP] Embed Pods Frameworks */ = {
@@ -448,7 +448,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 			);
@@ -461,7 +461,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		71C83A737DACEC561AD989EB /* [CP] Check Pods Manifest.lock */ = {
