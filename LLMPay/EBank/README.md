@@ -252,9 +252,9 @@ Copy Bundle Resources  是否有引入
 
 ## Author
 
-LLPayiOSDev, iosdev@yintong.com.cn
+LLPayiOSDev, iosdev@lianlianpay.com
 
 ## License
 
-© 2003-2018 Lianlian Yintong Electronic Payment Co., Ltd. All rights reserved.
+© 2003-2019 Lianlian Yintong Electronic Payment Co., Ltd. All rights reserved.
 

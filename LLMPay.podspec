@@ -8,8 +8,8 @@ Pod::Spec.new do |s|
     DESC
     
     s.homepage         = 'https://gitee.com/LLPayiOS/LLMPay'
-    s.license          = { :type => 'Copyright', :text => '© 2003-2018 Lianlian Yintong Electronic Payment Co., Ltd. All rights reserved.' }
-    s.author           = { 'LLPayiOSDev' => 'iosdev@yintong.com.cn' }
+    s.license          = { :type => 'Copyright', :text => '© 2003-2019 Lianlian Yintong Electronic Payment Co., Ltd. All rights reserved.' }
+    s.author           = { 'LLPayiOSDev' => 'iosdev@lianlianpay.com' }
     s.source           = { :git => 'https://gitee.com/LLPayiOS/LLMPay.git', :tag => s.version.to_s }
     s.platform = :ios
     s.ios.deployment_target = '8.0'
