@@ -16,6 +16,7 @@
     return YES;
 }
 
+//iOS 9 before
 - (BOOL)application:(UIApplication *)application
               openURL:(NSURL *)url
     sourceApplication:(NSString *)sourceApplication
@@ -23,6 +24,7 @@
     return [LLEBankPay handleOpenURL:url];
 }
 
+// iOS 9 later
 - (BOOL)application:(UIApplication *)app
             openURL:(NSURL *)url
             options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {

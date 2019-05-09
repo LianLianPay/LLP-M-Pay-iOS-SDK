@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name             = 'LLMPay'
-    s.version          = '4.0.1'
-    s.summary          = 'LLMPay iOS SDK'
+    s.version          = '4.0.3'
+    s.summary          = '连连支付统一网关支付SDK，LLMPay SDK with gateway_url'
     
     s.description      = <<-DESC
     LLMPaySDK是一个统一网关支付SDK，支持连连支付的认证支付、快捷支付、分期付、银行APP支付等支付方式， 支持短信、TouchID、FaceID等验证方式
@@ -37,10 +37,8 @@ Pod::Spec.new do |s|
         es.source_files = 'LLMPay/EBank/*.h'
         
         #ICBC Dependency
-        es.dependency 'AFNetworking','~>3.0'
-        es.dependency 'Toast'
-        es.xcconfig = {'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2'}
-        es.libraries = 'xml2'
+        #es.dependency 'AFNetworking','~>3.0'
+        #es.dependency 'Toast'
     end
     
 end

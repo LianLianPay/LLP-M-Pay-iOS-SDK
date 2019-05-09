@@ -2,8 +2,8 @@
 //  LLEBankPay.h
 //  LLEBankPay
 //
-//  Created by Fynil on 2018/4/24.
-//  Copyright © 2018年 LianLian Pay. All rights reserved.
+//  Created by EvenLin on 2018/4/24.
+//  Copyright © 2018年 LianLian Pay Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

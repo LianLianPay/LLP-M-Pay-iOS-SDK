@@ -21,16 +21,6 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		8329A22F21AD1320002C7438 /* libABCAppCaller.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8329A21821AD1320002C7438 /* libABCAppCaller.a */; };
-		8329A23021AD1320002C7438 /* ICBCPaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8329A21A21AD1320002C7438 /* ICBCPaySDK.framework */; };
-		8329A23121AD1320002C7438 /* ICBCPaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8329A21B21AD1320002C7438 /* ICBCPaySDK.bundle */; };
-		8329A23221AD1320002C7438 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 8329A22021AD1320002C7438 /* Base64.m */; };
-		8329A23321AD1320002C7438 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 8329A22221AD1320002C7438 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8329A23421AD1320002C7438 /* NSDictionaryXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8329A22521AD1320002C7438 /* NSDictionaryXMLParser.m */; };
-		8329A23521AD1320002C7438 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8329A22621AD1320002C7438 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8329A23621AD1320002C7438 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 8329A22921AD1320002C7438 /* XMLDictionary.m */; };
-		8329A23721AD1320002C7438 /* CCBSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8329A22D21AD1320002C7438 /* CCBSDK.bundle */; };
-		8329A23821AD1320002C7438 /* CCBNetPaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8329A22E21AD1320002C7438 /* CCBNetPaySDK.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		AB73F936291231C9D660D731 /* Pods_LLMPay_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C6FFB4B5731697B3C85275 /* Pods_LLMPay_Tests.framework */; };
 		CB07C44289225C3163A68C67 /* Pods_LLMPay_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4209A1EA77084295C46AF55E /* Pods_LLMPay_Example.framework */; };
@@ -71,24 +61,6 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		67740A8D8B8F607B7D76F23F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8329A21721AD1320002C7438 /* ABCAppCaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCAppCaller.h; sourceTree = "<group>"; };
-		8329A21821AD1320002C7438 /* libABCAppCaller.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libABCAppCaller.a; sourceTree = "<group>"; };
-		8329A21A21AD1320002C7438 /* ICBCPaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ICBCPaySDK.framework; sourceTree = "<group>"; };
-		8329A21B21AD1320002C7438 /* ICBCPaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ICBCPaySDK.bundle; sourceTree = "<group>"; };
-		8329A21E21AD1320002C7438 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
-		8329A21F21AD1320002C7438 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
-		8329A22021AD1320002C7438 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
-		8329A22121AD1320002C7438 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
-		8329A22221AD1320002C7438 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
-		8329A22421AD1320002C7438 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
-		8329A22521AD1320002C7438 /* NSDictionaryXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryXMLParser.m; sourceTree = "<group>"; };
-		8329A22621AD1320002C7438 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
-		8329A22821AD1320002C7438 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
-		8329A22921AD1320002C7438 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
-		8329A22A21AD1320002C7438 /* GDataDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataDefines.h; sourceTree = "<group>"; };
-		8329A22B21AD1320002C7438 /* NSDictionaryXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryXMLParser.h; sourceTree = "<group>"; };
-		8329A22D21AD1320002C7438 /* CCBSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CCBSDK.bundle; sourceTree = "<group>"; };
-		8329A22E21AD1320002C7438 /* CCBNetPaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CCBNetPaySDK.framework; sourceTree = "<group>"; };
 		83E0C5B621A65A7800940239 /* LLMPay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LLMPay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E0C5FC21A6B61B00940239 /* LLMPay_Example copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LLMPay_Example copy-Info.plist"; path = "/Users/evenlam/GitHub/LLMPay/Example/LLMPay_Example copy-Info.plist"; sourceTree = "<absolute>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,10 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
-				8329A23821AD1320002C7438 /* CCBNetPaySDK.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
-				8329A22F21AD1320002C7438 /* libABCAppCaller.a in Frameworks */,
-				8329A23021AD1320002C7438 /* ICBCPaySDK.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				CB07C44289225C3163A68C67 /* Pods_LLMPay_Example.framework in Frameworks */,
 			);
@@ -166,7 +135,6 @@
 		6003F593195388D20070C39A /* Example for LLMPay */ = {
 			isa = PBXGroup;
 			children = (
-				8329A21521AD1320002C7438 /* BankSDK */,
 				6003F59C195388D20070C39A /* LLPAppDelegate.h */,
 				6003F59D195388D20070C39A /* LLPAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -219,88 +187,6 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		8329A21521AD1320002C7438 /* BankSDK */ = {
-			isa = PBXGroup;
-			children = (
-				8329A21621AD1320002C7438 /* ABCLib */,
-				8329A21921AD1320002C7438 /* ICBCLib */,
-				8329A22C21AD1320002C7438 /* CCBLib */,
-			);
-			name = BankSDK;
-			path = ../../LLMPay/EBank/BankSDK;
-			sourceTree = "<group>";
-		};
-		8329A21621AD1320002C7438 /* ABCLib */ = {
-			isa = PBXGroup;
-			children = (
-				8329A21721AD1320002C7438 /* ABCAppCaller.h */,
-				8329A21821AD1320002C7438 /* libABCAppCaller.a */,
-			);
-			path = ABCLib;
-			sourceTree = "<group>";
-		};
-		8329A21921AD1320002C7438 /* ICBCLib */ = {
-			isa = PBXGroup;
-			children = (
-				8329A21A21AD1320002C7438 /* ICBCPaySDK.framework */,
-				8329A21B21AD1320002C7438 /* ICBCPaySDK.bundle */,
-				8329A21C21AD1320002C7438 /* ICBCPayUtil */,
-			);
-			path = ICBCLib;
-			sourceTree = "<group>";
-		};
-		8329A21C21AD1320002C7438 /* ICBCPayUtil */ = {
-			isa = PBXGroup;
-			children = (
-				8329A21D21AD1320002C7438 /* base64 */,
-				8329A22321AD1320002C7438 /* xml */,
-			);
-			path = ICBCPayUtil;
-			sourceTree = "<group>";
-		};
-		8329A21D21AD1320002C7438 /* base64 */ = {
-			isa = PBXGroup;
-			children = (
-				8329A21E21AD1320002C7438 /* Base64.h */,
-				8329A22021AD1320002C7438 /* Base64.m */,
-				8329A21F21AD1320002C7438 /* GTMBase64.h */,
-				8329A22221AD1320002C7438 /* GTMBase64.m */,
-				8329A22121AD1320002C7438 /* GTMDefines.h */,
-			);
-			path = base64;
-			sourceTree = "<group>";
-		};
-		8329A22321AD1320002C7438 /* xml */ = {
-			isa = PBXGroup;
-			children = (
-				8329A22A21AD1320002C7438 /* GDataDefines.h */,
-				8329A22421AD1320002C7438 /* GDataXMLNode.h */,
-				8329A22621AD1320002C7438 /* GDataXMLNode.m */,
-				8329A22B21AD1320002C7438 /* NSDictionaryXMLParser.h */,
-				8329A22521AD1320002C7438 /* NSDictionaryXMLParser.m */,
-				8329A22721AD1320002C7438 /* XMLDictionary */,
-			);
-			path = xml;
-			sourceTree = "<group>";
-		};
-		8329A22721AD1320002C7438 /* XMLDictionary */ = {
-			isa = PBXGroup;
-			children = (
-				8329A22821AD1320002C7438 /* XMLDictionary.h */,
-				8329A22921AD1320002C7438 /* XMLDictionary.m */,
-			);
-			path = XMLDictionary;
-			sourceTree = "<group>";
-		};
-		8329A22C21AD1320002C7438 /* CCBLib */ = {
-			isa = PBXGroup;
-			children = (
-				8329A22D21AD1320002C7438 /* CCBSDK.bundle */,
-				8329A22E21AD1320002C7438 /* CCBNetPaySDK.framework */,
-			);
-			path = CCBLib;
-			sourceTree = "<group>";
-		};
 		CA5D64010D73AAB37A2F44BC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,7 +210,6 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				4393367C579ECC948B0C13E8 /* [CP] Copy Pods Resources */,
-				711D6C134A0874542E627AFC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -377,6 +262,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -400,8 +286,6 @@
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
-				8329A23121AD1320002C7438 /* ICBCPaySDK.bundle in Resources */,
-				8329A23721AD1320002C7438 /* CCBSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,30 +322,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		711D6C134A0874542E627AFC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		71C83A737DACEC561AD989EB /* [CP] Check Pods Manifest.lock */ = {
@@ -515,12 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8329A23221AD1320002C7438 /* Base64.m in Sources */,
-				8329A23621AD1320002C7438 /* XMLDictionary.m in Sources */,
-				8329A23521AD1320002C7438 /* GDataXMLNode.m in Sources */,
-				8329A23421AD1320002C7438 /* NSDictionaryXMLParser.m in Sources */,
 				6003F59E195388D20070C39A /* LLPAppDelegate.m in Sources */,
-				8329A23321AD1320002C7438 /* GTMBase64.m in Sources */,
 				6003F5A7195388D20070C39A /* LLPViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);

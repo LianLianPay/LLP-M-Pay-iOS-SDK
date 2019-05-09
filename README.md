@@ -38,7 +38,7 @@
 4. 确认Library Search Paths中有 SDK 所在文件夹的路径
 
 ## 三. 调用 SDK
-
+    
 * 从服务端获取gateway_url
 * 调用支付SDK
 
@@ -67,7 +67,7 @@
 
 ## Author
 
-LLPayiOSDev, iosdev@yintong.com.cn
+LLPayiOSDev, iosdev@lianlianpay.com
 
 ## License
 
