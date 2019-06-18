@@ -305,16 +305,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example-resources.sh",
 				"${PODS_ROOT}/../../LLMPay/EBank/LLEBankResources.bundle",
 				"${PODS_ROOT}/../../LLMPay/MPay/LLMPayResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLEBankResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLMPayResources.bundle",

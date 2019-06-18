@@ -30,6 +30,37 @@
 
 执行 pod install 即可安装 LLMPay SDK
 
+> 微信支付
+
+若要接入包含**微信支付的**SDK， 请使用 
+
+`pod 'LLMPay/Wechat'`
+
+在info.plist中加入
+**LSApplicationQueriesSchemes** NSArray类型， 添加item， 值为 ***weixin***
+
+然后在 AppDelegate 中添加以下代码
+
+```objc	
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [LLMPay registerApp:@"wx1234ab4d4ffappid"];
+    });
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+	//if ([url.absoluteString hasPrefix:@"wx"])
+    return [LLMPay handleOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [LLMPay handleOpenURL:url];
+}
+
+```
+
+
 >  直接导入工程的方式  
 
 1. 导入连连支付 iOS SDK，将包含有连连支付 SDK 的文件夹拖入到 Xcode 工程中

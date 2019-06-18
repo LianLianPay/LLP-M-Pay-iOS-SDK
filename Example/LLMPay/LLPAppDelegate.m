@@ -8,11 +8,15 @@
 
 #import "LLPAppDelegate.h"
 #import <LLMPay/LLEBankPay.h>
+#import <LLMPay/LLMPay.h>
 
 @implementation LLPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [LLMPay registerApp:@""];
+//    });
     return YES;
 }
 
@@ -21,6 +25,9 @@
               openURL:(NSURL *)url
     sourceApplication:(NSString *)sourceApplication
            annotation:(id)annotation {
+    if ([url.absoluteString hasPrefix:@"wx"]) {
+        return [LLMPay handleOpenURL:url];
+    }
     return [LLEBankPay handleOpenURL:url];
 }
 
@@ -28,6 +35,9 @@
 - (BOOL)application:(UIApplication *)app
             openURL:(NSURL *)url
             options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
+    if ([url.absoluteString hasPrefix:@"wx"]) {
+        return [LLMPay handleOpenURL:url];
+    }
     return [LLEBankPay handleOpenURL:url];
 }
 

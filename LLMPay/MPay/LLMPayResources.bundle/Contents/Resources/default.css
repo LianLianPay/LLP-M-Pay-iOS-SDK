@@ -19,8 +19,6 @@
 #TX-S{font-size:15px}
 #TX-HeadView{font-color:#333333;bg-color:#ffffff}
 
-/*#LLPay-More{support:false};*/
-
 #TX-1{font-color:#333333}
 #TX-2{font-color:#ff0000}
 #TX-3{font-color:#00a0e9} /*短信弹框确认文字颜色，购买信息价格文字颜色 #fe5000*/
@@ -61,8 +59,6 @@ LLColorButton{border-radius:5px;}
 
 #a-button{normal-color:#00a0e9;hi-color:#017fc7;disable-color:214,214,214}
 #b-button{normal-color:#00a0e9;hi-color:#017fc7;font-color:#ffffff;}
-/*#c-button{normal-color:#fe932f;hi-color:#cb7320;}*/
-/*#d-button{normal-color:#dcdcdc;hi-color:#a9a9a9;}*/
 #e-button{normal-color:#ffeec1;hi-color:#eeeeee;border-color:#ffd778;border-width:0.8px;font-color:#fe5000;}
 #f-button{normal-color:#ffffff;hi-color:#999999;border-color:#d9d9d9;border-width:0.8px;font-color:#666666;}
 #pay-button{normal-color:#00a0e9;hi-color:#017fc7;disable-color:214,214,214;border-radius:5}

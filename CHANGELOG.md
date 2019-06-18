@@ -1,8 +1,12 @@
 CHANGE LIST
 ======
+## LLMPay 4.0.4
+build 2019061201
+
+- 微信支付支持
 
 ## LLMPay 4.0.3
-build 20019042801
+build 2019042801
 
 - 银行APP支付 招行、中行支持网联渠道APP支付
 

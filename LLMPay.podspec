@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'LLMPay'
-    s.version          = '4.0.3'
+    s.version          = '4.0.4'
     s.summary          = '连连支付统一网关支付SDK，LLMPay SDK with gateway_url'
     
     s.description      = <<-DESC
@@ -17,12 +17,12 @@ Pod::Spec.new do |s|
     s.default_subspecs = 'MPay'
     
     s.subspec 'Core' do |cs|
-        cs.vendored_library = 'LLMPay/Core/*.a'
+        cs.vendored_library = 'LLMPay/Core/libLLPaySDKCore.a'
         cs.xcconfig = { 'OTHER_LDFLAGS' => '-lObjC'}
     end
     
     s.subspec 'MPay' do |ms|
-        ms.vendored_library = 'LLMPay/MPay/*.a'
+        ms.vendored_library = 'LLMPay/MPay/libLLMobilePay.a'
         ms.public_header_files = 'LLMPay/MPay/*.h'
         ms.resource = 'LLMPay/MPay/LLMPayResources.bundle'
         ms.dependency 'LLMPay/Core'
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'EBank' do |es|
-        es.vendored_library = 'LLMPay/EBank/*.a'
+        es.vendored_library = 'LLMPay/EBank/libLLEBankPay.a'
         es.public_header_files = 'LLMPay/EBank/*.h'
         es.resource = 'LLMPay/EBank/LLEBankResources.bundle'
         es.dependency 'LLMPay/Core'
@@ -40,5 +40,13 @@ Pod::Spec.new do |s|
         #es.dependency 'AFNetworking','~>3.0'
         #es.dependency 'Toast'
     end
+
+    #包含微信支付的新架构SDK
+    s.subspec 'Wechat' do |ws|
+        ws.vendored_library = 'LLMPay/Wechat/libLLMWeChat.a'
+        ws.dependency 'LLMPay/MPay'
+        ws.dependency 'WechatOpenSDK'
+    end
     
+
 end
