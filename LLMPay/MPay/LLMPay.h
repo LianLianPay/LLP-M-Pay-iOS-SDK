@@ -19,7 +19,7 @@ typedef NS_ENUM(NSUInteger, LLMPayResult) {
     LLMPayResultRequestingCancel, /**< 授权支付后取消(支付请求已发送) */
 };
 
-typedef void (^CompletionHandler)(LLMPayResult result, NSDictionary<NSString *, NSString *> *dic);
+typedef void (^CompletionHandler)(LLMPayResult result, NSDictionary<NSString *, NSString *> *_Nullable dic);
 
 @interface LLMPay : NSObject
 
@@ -28,32 +28,32 @@ typedef void (^CompletionHandler)(LLMPayResult result, NSDictionary<NSString *, 
  *
  *  @return 返回LLTokenPaySDK的单例对象
  */
-+ (nonnull LLMPay *)sharedSdk;
++ (nonnull instancetype)sharedSdk;
 
 /**
  SDK 默认由 window.rootVC present, 若已占用,请自定义
  */
-@property (nonatomic, strong) UIViewController *cusViewController;
+@property (nonatomic, strong, nullable) UIViewController *cusViewController;
 
 /**
  支付申请
-
+ 
  @param gateway_url 交易信息
  @param complete 回调
  */
-- (void)payApply:(nonnull NSString *)gateway_url complete:(CompletionHandler)complete;
+- (void)payApply:(nonnull NSString *)gateway_url complete:(nonnull CompletionHandler)complete;
 
 /**
  签约申请
-
+ 
  @param gateway_url 交易信息
  @param complete 回调
  */
-- (void)signApply:(nonnull NSString *)gateway_url complete:(CompletionHandler)complete;
+- (void)signApply:(nonnull NSString *)gateway_url complete:(nonnull CompletionHandler)complete;
 
 /**
  获取SDK当前版本
-
+ 
  @return 版本号
  */
 + (nonnull NSString *)getSDKVersion;

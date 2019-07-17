@@ -25,24 +25,21 @@
 }
 
 - (IBAction)PayAction:(UIButton *)sender {
-    [[LLMPay sharedSdk] payApply:self.field.text
-                        complete:^(LLMPayResult result, NSDictionary *dic) {
-                             [self alertWithMsg:dic[@"ret_msg"]];
-                        }];
+    [[LLMPay sharedSdk] payApply:self.field.text complete:^(LLMPayResult result, NSDictionary<NSString *,NSString *> * _Nullable dic) {
+        [self alertWithMsg:dic[@"ret_msg"]];
+    }];
 }
 
 - (IBAction)signAction:(UIButton *)sender {
-    [[LLMPay sharedSdk] signApply:self.field.text
-                         complete:^(LLMPayResult result, NSDictionary *dic) {
-                             [self alertWithMsg:dic[@"ret_msg"]];
-                         }];
+    [[LLMPay sharedSdk] signApply:self.field.text complete:^(LLMPayResult result, NSDictionary<NSString *,NSString *> * _Nullable dic) {
+        [self alertWithMsg:dic[@"ret_msg"]];
+    }];
 }
 
 - (IBAction)bankPay:(id)sender {
-    [[LLEBankPay sharedSDK] llEBankPayWithUrl:self.field.text
-                                     complete:^(LLPayResult result, NSDictionary *dic) {
-                                         [self alertWithMsg:dic[@"ret_msg"]];
-                                     }];
+    [[LLEBankPay sharedSDK] llEBankPayWithUrl:self.field.text complete:^(LLPayResult result, NSDictionary<NSString *,NSString *> * _Nullable dic) {
+        [self alertWithMsg:dic[@"ret_msg"]];
+    }];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

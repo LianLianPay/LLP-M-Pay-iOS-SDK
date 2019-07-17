@@ -30,17 +30,17 @@ typedef enum LLPayResult {
 
 
 /**
-  调用银行 APP 支付 SDK
-
+ 调用银行 APP 支付 SDK
+ 
  @param gatewayUrl 创单获取到的 gatewayUrl
  @param complete  回调
  */
-- (void)llEBankPayWithUrl:(nonnull NSString *)gatewayUrl complete:(void(^)(LLPayResult result, NSDictionary<NSString *, NSString *> *dic))complete;
+- (void)llEBankPayWithUrl:(nonnull NSString *)gatewayUrl complete:(nonnull void(^)(LLPayResult result, NSDictionary<NSString *,NSString *> *_Nullable dic))complete;
 
 
 /**
  处理银行 APP 回调
-
+ 
  @param url  url
  @return bool
  */
