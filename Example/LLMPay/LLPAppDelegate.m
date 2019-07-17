@@ -28,7 +28,10 @@
     if ([url.absoluteString hasPrefix:@"wx"]) {
         return [LLMPay handleOpenURL:url];
     }
-    return [LLEBankPay handleOpenURL:url];
+    if ([url.scheme hasPrefix:@"ll"] || [url.scheme hasPrefix:@"lian"]) {
+        return [LLEBankPay handleOpenURL:url];
+    }
+    return YES;
 }
 
 // iOS 9 later
@@ -38,7 +41,14 @@
     if ([url.absoluteString hasPrefix:@"wx"]) {
         return [LLMPay handleOpenURL:url];
     }
-    return [LLEBankPay handleOpenURL:url];
+    if ([url.scheme hasPrefix:@"ll"] || [url.scheme hasPrefix:@"lian"]) {
+        return [LLEBankPay handleOpenURL:url];
+    }
+    return YES;
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    [LLEBankPay handleOpenURL:nil];
 }
 
 
@@ -55,11 +65,6 @@
     // information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user
     // quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on
-    // entering the background.
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

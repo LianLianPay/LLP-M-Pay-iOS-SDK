@@ -1,5 +1,13 @@
 CHANGE LIST
 ======
+
+## LLMPay 4.0.5
+build 2019070801
+
+- 银行APP支付支持中国工商银行APP了
+- 银行APP支付退出SDK之前会做订单查询， 将具体结果返回给商户
+- 适配iOS13 modalPresentationStyle
+
 ## LLMPay 4.0.4
 build 2019061201
 

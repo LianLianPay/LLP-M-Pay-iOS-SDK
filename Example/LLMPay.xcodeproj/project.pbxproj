@@ -210,6 +210,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				4393367C579ECC948B0C13E8 /* [CP] Copy Pods Resources */,
+				483596A005089D6466F67E16 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,16 +309,38 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example-resources.sh",
 				"${PODS_ROOT}/../../LLMPay/EBank/LLEBankResources.bundle",
+				"${PODS_ROOT}/../../LLMPay/ICBC/ICBCPaySDK.bundle",
 				"${PODS_ROOT}/../../LLMPay/MPay/LLMPayResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLEBankResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ICBCPaySDK.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLMPayResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		483596A005089D6466F67E16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LLMPay_Example/Pods-LLMPay_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		71C83A737DACEC561AD989EB /* [CP] Check Pods Manifest.lock */ = {

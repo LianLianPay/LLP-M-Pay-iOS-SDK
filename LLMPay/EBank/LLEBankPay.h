@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef enum LLPayResult {
     kLLPayResultSuccess = 0,      /**< 支付成功 */
@@ -20,12 +21,12 @@ typedef enum LLPayResult {
 
 @interface LLEBankPay : NSObject
 
-+ (instancetype)sharedSDK;
++ (nonnull instancetype)sharedSDK;
 
 /**
  SDK 默认由 window.rootVC present, 若已占用,请自定义
  */
-@property (nonatomic, strong) UIViewController *customVC;
+@property (nonatomic, strong, nullable) UIViewController *customVC;
 
 
 /**
@@ -34,7 +35,7 @@ typedef enum LLPayResult {
  @param gatewayUrl 创单获取到的 gatewayUrl
  @param complete  回调
  */
-- (void)llEBankPayWithUrl:(NSString *)gatewayUrl complete:(void(^)(LLPayResult result, NSDictionary *dic))complete;
+- (void)llEBankPayWithUrl:(nonnull NSString *)gatewayUrl complete:(void(^)(LLPayResult result, NSDictionary<NSString *, NSString *> *dic))complete;
 
 
 /**
@@ -43,14 +44,14 @@ typedef enum LLPayResult {
  @param url  url
  @return bool
  */
-+ (BOOL)handleOpenURL:(NSURL *)url;
++ (BOOL)handleOpenURL:(nullable NSURL *)url;
 
 /**
  获取SDK当前版本
  
  @return 版本号
  */
-+ (NSString *)getSDKVersion;
++ (nonnull NSString *)getSDKVersion;
 
 /**
  *  切换正式、测试服务器（默认不调用是正式环境，请不要随意使用该函数切换至测试环境）

@@ -22,7 +22,7 @@
 |文件名|                       说明|
 |------------------           |-------------------                   |
 |libLLPaySDKCore.a            |	SDK base模块                        |
-|libLLMPay.a                  |	连连支付银行 APP 支付统一网关 iOS SDK  |
+|libLLEBankPay.a                  |	连连支付银行 APP 支付统一网关 iOS SDK  |
 |LLEBankPay.h                 |	SDK 头文件                           |
 |LLEBankResources.bundle      |  资源文件， 包含自定义 css 以及图片资源   |
 |README.md                		|	连连支付银行APP支付统一网关iOS SDK接入指南|
@@ -69,7 +69,7 @@
 为了让银行APP在处理完交易后点击返回商户能返回商户的APP， 需要配置商户APP的 URL Schemes
 
 * 添加 URL Schemes，设置 Identifier 为 **LLEBankScheme**, 此处需要添加 2 个 scheme，  建行与中行需要单独配置，每个 scheme 中间以英文逗号隔开，scheme 格式如下：
-	1. scheme 格式为 ll*****
+	1. scheme 格式为 ll+商户号
 	2. scheme 为 lianlianpay
 	
 ### 4.4 App Transport Security Settings
@@ -136,13 +136,26 @@
 为了收到银行SDK的回调，需要在APP Delegate中加入以下代码：
 
 ```objc
+//before iOS 9
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [LLEBankPay handleOpenURL:url];
+	if ([url.scheme hasPrefix:@"ll"] || [url.scheme hasPrefix:@"lian"]) {
+		return [LLEBankPay handleOpenURL:url];
+	}
+	return YES;
 }
 
+//iOS 9 later
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-    return [LLEBankPay handleOpenURL:url];
+	if ([url.scheme hasPrefix:@"ll"] || [url.scheme hasPrefix:@"lian"]) {
+		return [LLEBankPay handleOpenURL:url];
+	}
+	return YES;
 }
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    [LLEBankPay handleOpenURL:nil];
+}
+
 ```
 
 
@@ -152,7 +165,8 @@
 |-----|-----|
 |  LE0000  |  支付成功  |  
 |  LE0002  |  交易在WAP中处理完成  |  
-|  LE0003  |  交易在APP中处理完成  |  
+|  LE0003  |  交易在APP中处理完成  | 
+|  LE0004  |  等待支付	| 
 |  LE0106  |  银行卡查询失败  |  
 |  LE1001  |  SDK签名验证失败  |  
 |  LE1004  |  商户请求参数校验错误  |
@@ -171,7 +185,12 @@
 |  LE9912  |  该卡不支持  |  
 |  LE9999  |  系统错误  |  
 
-**请注意，支付完成后必须通过订单查询接口查询订单结果，LE1001支付处理失败也可能是因为没有导入银行的SDK**
+~~请注意，支付完成后必须通过订单查询接口查询订单结果，LE1001支付处理失败也可能是因为没有导入银行的SDK~~
+
+**LLMPay 4.0.5 开始， SDK会自己去做订单查询功能， 返回给商户等待支付，或者支付成功的结果**
+
+
+
 
 ## 注意事项
 * 本SDK最低支持 iOS 8.0

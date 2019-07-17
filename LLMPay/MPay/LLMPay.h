@@ -19,7 +19,7 @@ typedef NS_ENUM(NSUInteger, LLMPayResult) {
     LLMPayResultRequestingCancel, /**< 授权支付后取消(支付请求已发送) */
 };
 
-typedef void (^CompletionHandler)(LLMPayResult result, NSDictionary *dic);
+typedef void (^CompletionHandler)(LLMPayResult result, NSDictionary<NSString *, NSString *> *dic);
 
 @interface LLMPay : NSObject
 
@@ -28,7 +28,7 @@ typedef void (^CompletionHandler)(LLMPayResult result, NSDictionary *dic);
  *
  *  @return 返回LLTokenPaySDK的单例对象
  */
-+ (LLMPay *)sharedSdk;
++ (nonnull LLMPay *)sharedSdk;
 
 /**
  SDK 默认由 window.rootVC present, 若已占用,请自定义
@@ -41,7 +41,7 @@ typedef void (^CompletionHandler)(LLMPayResult result, NSDictionary *dic);
  @param gateway_url 交易信息
  @param complete 回调
  */
-- (void)payApply:(NSString *)gateway_url complete:(CompletionHandler)complete;
+- (void)payApply:(nonnull NSString *)gateway_url complete:(CompletionHandler)complete;
 
 /**
  签约申请
@@ -49,14 +49,14 @@ typedef void (^CompletionHandler)(LLMPayResult result, NSDictionary *dic);
  @param gateway_url 交易信息
  @param complete 回调
  */
-- (void)signApply:(NSString *)gateway_url complete:(CompletionHandler)complete;
+- (void)signApply:(nonnull NSString *)gateway_url complete:(CompletionHandler)complete;
 
 /**
  获取SDK当前版本
 
  @return 版本号
  */
-+ (NSString *)getSDKVersion;
++ (nonnull NSString *)getSDKVersion;
 
 /**
  *  切换正式、测试服务器（默认不调用是正式环境，请不要随意使用该函数切换至测试环境）
@@ -71,9 +71,9 @@ typedef void (^CompletionHandler)(LLMPayResult result, NSDictionary *dic);
 @interface LLMPay (Wechat)
 
 
-+ (BOOL)registerApp: (NSString *)wxAppId;
++ (BOOL)registerApp: (nonnull NSString *)wxAppId;
 
-+ (BOOL)handleOpenURL: (NSURL *)url;
++ (BOOL)handleOpenURL: (nullable NSURL *)url;
 
 @end
 

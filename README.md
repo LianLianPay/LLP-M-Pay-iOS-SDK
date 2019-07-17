@@ -11,7 +11,7 @@
 
 ## 一. SDK 文件说明
 
-|文件名|                       说明|
+|文件名|                       说明|	
 |------------------                     |-------------------                        |
 |libLLPaySDKCore.a              |     SDK base模块                        |
 |libLLMobilePay.a                         |连连支付统一网关iOS SDK        |

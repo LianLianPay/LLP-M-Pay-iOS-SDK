@@ -10,7 +10,6 @@
 #import <LLMPay/LLMPay.h>
 #import <LLMPay/LLEBankPay.h>
 
-
 @interface LLPViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *field;
@@ -59,7 +58,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
