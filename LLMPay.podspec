@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'LLMPay'
-    s.version          = '4.0.5'
+    s.version          = '4.0.6'
     s.summary          = '连连支付统一网关支付SDK，LLMPay SDK with gateway_url'
     
     s.description      = <<-DESC
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
     DESC
     
     s.homepage         = 'https://gitee.com/LLPayiOS/LLMPay'
-    s.license          = { :type => 'Copyright', :text => '© 2003-2019 Lianlian Yintong Electronic Payment Co., Ltd. All rights reserved.' }
+    s.license          = { :type => 'Copyright', :text => '© 2003-2020 Lianlian Yintong Electronic Payment Co., Ltd. All rights reserved.' }
     s.author           = { 'LLPayiOSDev' => 'iosdev@lianlianpay.com' }
     s.source           = { :git => 'https://gitee.com/LLPayiOS/LLMPay.git', :tag => s.version.to_s }
     s.platform = :ios
@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
     s.subspec 'Wechat' do |ws|
         ws.vendored_library = 'LLMPay/Wechat/libLLMWeChat.a'
         ws.dependency 'LLMPay/MPay'
-        ws.dependency 'WechatOpenSDK'
+        ws.dependency 'WechatOpenSDK', '1.8.5'
     end
     
     s.subspec 'ICBC' do |gs|

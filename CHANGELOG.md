@@ -1,6 +1,13 @@
 CHANGE LIST
 ======
 
+## LLMPay 4.0.6
+Build 20200115
+
+- 更新为WKWebView
+- 禁用黑暗模式
+- 修复了iOS13 验证码按钮被压缩问题
+
 ## LLMPay 4.0.5
 build 2019070801
 

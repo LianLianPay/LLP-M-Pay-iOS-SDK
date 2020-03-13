@@ -19,9 +19,11 @@ typedef enum LLPayResult {
     kLLPayResultRequestingCancel, /**< 授权支付后取消(支付请求已发送) */
 } LLPayResult;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface LLEBankPay : NSObject
 
-+ (nonnull instancetype)sharedSDK;
++ (instancetype)sharedSDK;
 
 /**
  SDK 默认由 window.rootVC present, 若已占用,请自定义
@@ -30,17 +32,17 @@ typedef enum LLPayResult {
 
 
 /**
- 调用银行 APP 支付 SDK
- 
+  调用银行 APP 支付 SDK
+
  @param gatewayUrl 创单获取到的 gatewayUrl
  @param complete  回调
  */
-- (void)llEBankPayWithUrl:(nonnull NSString *)gatewayUrl complete:(nonnull void(^)(LLPayResult result, NSDictionary<NSString *,NSString *> *_Nullable dic))complete;
+- (void)llEBankPayWithUrl:(NSString *)gatewayUrl complete:(void(^)(LLPayResult result, NSDictionary<NSString *,NSString *> *_Nullable dic))complete;
 
 
 /**
  处理银行 APP 回调
- 
+
  @param url  url
  @return bool
  */
@@ -51,7 +53,7 @@ typedef enum LLPayResult {
  
  @return 版本号
  */
-+ (nonnull NSString *)getSDKVersion;
++ (NSString *)getSDKVersion;
 
 /**
  *  切换正式、测试服务器（默认不调用是正式环境，请不要随意使用该函数切换至测试环境）
@@ -61,3 +63,5 @@ typedef enum LLPayResult {
 + (void)switchToTestServer:(BOOL)isTestServer;
 
 @end
+
+NS_ASSUME_NONNULL_END

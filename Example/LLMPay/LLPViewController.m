@@ -13,7 +13,7 @@
 @interface LLPViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *field;
-@property (weak, nonatomic) IBOutlet UILabel *version;
+@property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 
 @end
 
@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.versionLabel.text = [NSString stringWithFormat:@"当前版本号：%@",[LLMPay getSDKVersion]];
     NSLog(@"version = %@", [LLMPay getSDKVersion]);
 }
 

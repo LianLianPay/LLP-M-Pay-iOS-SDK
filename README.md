@@ -102,4 +102,4 @@ LLPayiOSDev, iosdev@lianlianpay.com
 
 ## License
 
-© 2003-2019 Lianlian Yintong Electronic Payment Co., Ltd. All rights reserved.
+© 2003-2020 Lianlian Yintong Electronic Payment Co., Ltd. All rights reserved.

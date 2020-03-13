@@ -21,6 +21,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		833F29C9241B3D2700761229 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 833F29C8241B3D2700761229 /* CHANGELOG.md */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		AB73F936291231C9D660D731 /* Pods_LLMPay_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C6FFB4B5731697B3C85275 /* Pods_LLMPay_Tests.framework */; };
 		CB07C44289225C3163A68C67 /* Pods_LLMPay_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4209A1EA77084295C46AF55E /* Pods_LLMPay_Example.framework */; };
@@ -61,6 +62,7 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		67740A8D8B8F607B7D76F23F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		833F29C8241B3D2700761229 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		83E0C5B621A65A7800940239 /* LLMPay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LLMPay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E0C5FC21A6B61B00940239 /* LLMPay_Example copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LLMPay_Example copy-Info.plist"; path = "/Users/evenlam/GitHub/LLMPay/Example/LLMPay_Example copy-Info.plist"; sourceTree = "<absolute>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				833F29C8241B3D2700761229 /* CHANGELOG.md */,
 				FB4E0A8AED802ACE89F4C14A /* LLMPay.podspec */,
 				67740A8D8B8F607B7D76F23F /* README.md */,
 			);
@@ -251,7 +254,7 @@
 				ORGANIZATIONNAME = LLPayiOSDev;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = VM7X2GJGGF;
+						ProvisioningStyle = Manual;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				833F29C9241B3D2700761229 /* CHANGELOG.md in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
@@ -524,7 +528,9 @@
 			baseConfigurationReference = 310E8FF183AAB5DB835982BE /* Pods-LLMPay_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VM7X2GJGGF;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
@@ -542,9 +548,11 @@
 					"\"${PODS_ROOT}/../../LLMPay/MPay\"",
 					"\"$(SRCROOT)/../LLMPay/EBank/BankSDK/ABCLib\"",
 				);
+				MARKETING_VERSION = 1;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.LLMPay-Exampleadf";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -554,7 +562,9 @@
 			baseConfigurationReference = 922CE928A08FCD3686718DA5 /* Pods-LLMPay_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VM7X2GJGGF;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
@@ -572,9 +582,11 @@
 					"\"${PODS_ROOT}/../../LLMPay/MPay\"",
 					"\"$(SRCROOT)/../LLMPay/EBank/BankSDK/ABCLib\"",
 				);
+				MARKETING_VERSION = 1;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.LLMPay-Exampleadf";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
