@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'LLMPay'
-    s.version          = '4.0.6'
+    s.version          = '4.0.8'
     s.summary          = '连连支付统一网关支付SDK，LLMPay SDK with gateway_url'
     
     s.description      = <<-DESC

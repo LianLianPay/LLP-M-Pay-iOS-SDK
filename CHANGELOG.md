@@ -1,6 +1,10 @@
 CHANGE LIST
 ======
 
+## LLMPay 4.0.8
+Build 20200115
+
+- 工行SDK更换
 ## LLMPay 4.0.6
 Build 20200115
 

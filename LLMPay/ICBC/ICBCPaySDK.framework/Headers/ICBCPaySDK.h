@@ -34,14 +34,6 @@
 @property (nonatomic, weak) id<ICBCPaySDKDelegate>  sdkDelegate;
 
 /**
- *  工行支付 支付接口
- *
- *  @param viewController 推出工行支付支付界面的ViewController
- *  @param traderInfo     交易信息
- */
-- (void)presentICBCPaySDKInViewController: (UIViewController *)viewController
-                          andTraderInfo: (NSDictionary *)traderInfo;
-/**
  
  *  支付回跳App
  *
@@ -65,9 +57,9 @@
 - (NSString *)getVersion;
 
 
-// 请务必配置urlListmain 和urlPortal
+// 测试环境，请配置urlListmain 和urlPortal
 
-@property (nonatomic, strong) NSString *urlListMain;//网联无需配置此地址
-@property (nonatomic, strong) NSString *urlPortal;
+@property (nonatomic, strong) NSString *urlListMain;//客户端支付列表，支付平台地址
+@property (nonatomic, strong) NSString *urlPortal;//跳转h5地址，手机银行地址,网联SDK无需配置此地址
 
 @end
