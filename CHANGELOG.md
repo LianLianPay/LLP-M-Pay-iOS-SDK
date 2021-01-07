@@ -1,6 +1,12 @@
 CHANGE LIST
 ======
 
+## LLMPay 4.1.0
+Build 20210107
+- 建行SDK更换
+- 按钮兼容问题修复
+
+
 ## LLMPay 4.0.8
 Build 20200115
 

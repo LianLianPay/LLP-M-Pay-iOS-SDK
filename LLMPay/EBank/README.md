@@ -63,14 +63,16 @@
 	* com.icbc.iphoneclient   （中国工商银行）
 	* cmbmobilebank   （招商银行）
 	* bocpay    （中国银行）
+       * ccbmbswebunionpay    （中国建设银行）
 
 ### 4.3 URL Types
 
 为了让银行APP在处理完交易后点击返回商户能返回商户的APP， 需要配置商户APP的 URL Schemes
 
-* 添加 URL Schemes，设置 Identifier 为 **LLEBankScheme**, 此处需要添加 2 个 scheme，  建行与中行需要单独配置，每个 scheme 中间以英文逗号隔开，scheme 格式如下：
+* 添加 URL Schemes，设置 Identifier 为 **LLEBankScheme**, 此处需要添加 3 个 scheme，  建行与中行需要单独配置，每个 scheme 中间以英文逗号隔开，scheme 格式如下：
 	1. scheme 格式为 ll+商户号
 	2. scheme 为 lianlianpay
+       3. scheme 为 comccbpay105331000004503llpay
 	
 ### 4.4 App Transport Security Settings
 

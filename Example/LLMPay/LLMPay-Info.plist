@@ -31,6 +31,7 @@
 			<array>
 				<string>llEbankPayGWURLPodDemo</string>
 				<string>lianlianpay</string>
+				<string>comccbpay105331000004503llpay</string>
 			</array>
 		</dict>
 		<dict>
@@ -48,6 +49,7 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>ccbmbswebunionpay</string>
 		<string>weixin</string>
 		<string>mbspay</string>
 		<string>bocpay</string>

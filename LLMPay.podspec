@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'LLMPay'
-    s.version          = '4.0.8'
+    s.version          = '4.1.0'
     s.summary          = '连连支付统一网关支付SDK，LLMPay SDK with gateway_url'
     
     s.description      = <<-DESC
@@ -36,8 +36,9 @@ Pod::Spec.new do |s|
         es.dependency 'LLMPay/Core'
         es.source_files = 'LLMPay/EBank/*.h'
         es.dependency 'LLMPay/ICBC'
+        es.dependency 'LLMPay/CCBLib'
     end
-
+    
     #包含微信支付的新架构SDK
     s.subspec 'Wechat' do |ws|
         ws.vendored_library = 'LLMPay/Wechat/libLLMWeChat.a'
@@ -52,5 +53,9 @@ Pod::Spec.new do |s|
         gs.dependency 'Toast'
     end
     
+    s.subspec 'CCBLib' do |gs|
+        gs.vendored_frameworks = 'LLMPay/CCBLib/CCBIFPaySDK.framework'
+    end
+
 
 end
