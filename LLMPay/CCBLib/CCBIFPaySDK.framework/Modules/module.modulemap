@@ -1,0 +1,6 @@
+framework module CCBIFPaySDK {
+  umbrella header "CCBIFPaySDK.h"
+
+  export *
+  module * { export * }
+}
